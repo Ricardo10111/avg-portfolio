@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google'
+import { Outfit } from 'next/font/google'
 import './globals.css'
 
 // components
@@ -7,17 +7,17 @@ import Footer from '@/components/Footer'
 // theme provider
 import { ThemeProvider } from '@/components/ThemeProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'AVG Portfolio',
-  description: 'Portfolio of a marketing professional',
+  title: 'AVG Web Page',
+  description: 'Web Page of a marketing professional',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={'inter.className'}>
+      <body className={outfit.className}>
         <ThemeProvider attribute='class' defaultTheme='light'>
           <Header />
           {children}

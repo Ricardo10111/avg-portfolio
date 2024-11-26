@@ -1,10 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Logo = () => {
+const Logo = ({ renderLogo }) => {
+  if (renderLogo) {
+    return renderLogo()
+  }
+
   return (
     <Link href='/'>
-      <Image src='logogray.svg' width={54} height={54} priority alt=''></Image>
+      <Image src='logogray.svg' width={54} height={54} priority alt='Logo' />
     </Link>
   )
 }

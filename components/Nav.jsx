@@ -1,8 +1,6 @@
-import Link from 'next/link'
+'use client'
 
-// next hooks
 import { usePathname } from 'next/navigation'
-
 import { motion } from 'framer-motion'
 
 const links = [
@@ -10,13 +8,15 @@ const links = [
   { path: '/contact', name: 'contact' },
 ]
 
-const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, underLineStyles, renderLink }) => {
   const path = usePathname()
   return (
     <nav className={`${containerStyles}`}>
-      {links.map((link, index) => {
-        return (
-          <Link
+      {links.map((link, index) =>
+        renderLink ? (
+          renderLink(link.name, link.path)
+        ) : (
+          <a
             href={link.path}
             key={index}
             className={`capitalize ${linkStyles}`}
@@ -31,9 +31,9 @@ const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
               />
             )}
             {link.name}
-          </Link>
-        )
-      })}
+          </a>
+        ),
+      )}
     </nav>
   )
 }

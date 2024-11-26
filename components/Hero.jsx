@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { Download, Send } from 'lucide-react'
+import { Link as ScrollLink } from 'react-scroll'
 
 import {
   RiBriefcase4Fill,
@@ -37,9 +40,15 @@ const Hero = () => {
                   Contact me <Send size={18} />
                 </Button>
               </Link>
-              <Button variant='secondary' className='gap-x-2'>
-                Download CV <Download size={18} />
-              </Button>
+              <a
+                href='/contact/ANVG_PMM_ResumeV2.pdf'
+                target='_blank' // Abre en una nueva pestaña
+                rel='noopener noreferrer' // Seguridad adicional
+              >
+                <Button variant='secondary' className='gap-x-2'>
+                  Download CV <Download size={18} />
+                </Button>
+              </a>
             </div>
             {/* Socilas */}
             <Socials
@@ -81,8 +90,15 @@ const Hero = () => {
           </div>
         </div>
         {/* icon */}
-        <div className='hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce'>
-          <RiArrowDownSLine className='text-3xl text-primary' />
+        <div className='hidden md:flex  absolute md:left-1/2 left-2/4 bottom-44 xl:bottom-12 animate-bounce'>
+          <ScrollLink
+            to='about'
+            smooth={true}
+            duration={900}
+            className='cursor-pointer'
+          >
+            <RiArrowDownSLine className='text-3xl text-primary' />
+          </ScrollLink>
         </div>
       </div>
     </section>

@@ -108,10 +108,79 @@ const skillsData = [
     title: 'tools',
     data: [
       {
+        imgPath: '/about/asana.svg',
+      },
+      {
+        imgPath: '/about/Canva.svg',
+      },
+      {
+        imgPath: '/about/clickup.svg',
+      },
+      {
+        imgPath: '/about/demio.svg',
+      },
+      {
         imgPath: '/about/figma.svg',
+      },
+
+      {
+        imgPath: '/about/google-ads.svg',
+      },
+      {
+        imgPath: '/about/google-analytics.svg',
+      },
+      {
+        imgPath: '/about/Hootsuite.svg',
+      },
+      {
+        imgPath: '/about/hotjar.svg',
+      },
+      {
+        imgPath: '/about/hubspot.svg',
+      },
+
+      {
+        imgPath: '/about/linkedin.svg',
+      },
+      {
+        imgPath: '/about/mailchimp.svg',
+      },
+
+      {
+        imgPath: '/about/meta.svg',
       },
       {
         imgPath: '/about/notion.svg',
+      },
+      {
+        imgPath: '/about/outbrian.svg',
+      },
+      {
+        imgPath: '/about/pipedrive.svg',
+      },
+      {
+        imgPath: '/about/salesforce.svg',
+      },
+      {
+        imgPath: '/about/shopify.svg',
+      },
+      {
+        imgPath: '/about/slack.svg',
+      },
+      {
+        imgPath: '/about/trello.svg',
+      },
+      {
+        imgPath: '/about/youtube.svg',
+      },
+      {
+        imgPath: '/about/zapier.svg',
+      },
+      {
+        imgPath: '/about/ProductHunt.svg',
+      },
+      {
+        imgPath: '/about/apollo.svg',
       },
     ],
   },
@@ -123,7 +192,7 @@ const About = () => {
   }
 
   return (
-    <section id='about' className='xl:h-[860px] pb-12 xl:py-24'>
+    <section id='about' className='xl:h-[900px] pb-12 xl:py-24'>
       <div className='container mx-auto'>
         <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
           About Me
@@ -305,7 +374,7 @@ const About = () => {
                       </h4>
                       <div className='border-b border-border mb-4'></div>
                       {/* tools list */}
-                      <div className='flex gap-x-8 justify-center xl:justify-start'>
+                      <div className='flex gap-x-8 gap-y-4 justify-center flex-wrap xl:justify-start'>
                         {getData(skillsData, 'tools').data.map(
                           (item, index) => {
                             const { imgPath } = item
@@ -316,6 +385,7 @@ const About = () => {
                                   width={48}
                                   height={48}
                                   alt=''
+                                  className='dark:filter  dark:grayscale dark:contrast-75 dark:brightness-100 '
                                   priority
                                 />
                               </div>

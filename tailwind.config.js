@@ -41,6 +41,7 @@ module.exports = {
         tertiary: {
           DEFAULT: 'hsl(var(--tertiary))',
         },
+
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
